@@ -1,0 +1,25 @@
+{
+  "name": "parzero-relay",
+  "version": "0.0.1",
+  "description": "parzero-relay",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "author": "Valera Rozuvan",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^6.1.4",
+    "chess.js": "^0.10.2",
+    "node-uci": "^1.3.1",
+    "uuid": "^3.3.2",
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^6.0.1",
+    "@types/chess.js": "^0.10.0",
+    "@types/uuid": "^3.4.4",
+    "@types/dotenv": "^6.1.0"
+  }
+}

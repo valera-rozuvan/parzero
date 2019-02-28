@@ -1,0 +1,26 @@
+{
+  "description": "parzero-plugin",
+  "manifest_version": 2,
+  "name": "parzero-plugin",
+  "version": "0.0.1",
+  "homepage_url": "https://github.com/valera-rozuvan/parzero",
+  "icons": {
+    "48": "img/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.example.com/*"],
+      "js": ["dist/index.js"]
+    }
+  ],
+  "permissions": [
+    "*://127.0.0.1:8000/*",
+    "*://127.0.0.1:8001/*",
+    "*://127.0.0.1/*",
+    "*://localhost/*",
+    "*://localhost:8000/*",
+    "*://localhost:8001/*",
+    "*://*.example.com/*",
+    "webRequest"
+  ]
+}
