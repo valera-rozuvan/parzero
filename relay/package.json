@@ -2,13 +2,12 @@
   "name": "parzero-relay",
   "version": "0.0.1",
   "description": "parzero-relay",
-  "main": "main.js",
+  "author": "Valera Rozuvan",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "start": "node ./main.js"
   },
-  "author": "Valera Rozuvan",
-  "license": "MIT",
   "dependencies": {
     "ws": "^6.1.4",
     "chess.js": "^0.10.2",

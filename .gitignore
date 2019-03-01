@@ -1,4 +1,9 @@
+# NPM dependencies
 node_modules
-plugin/dist
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# Local env variables
 .env
-manifest.json

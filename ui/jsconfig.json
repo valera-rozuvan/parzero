@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [ "./components/*" ],
+      "@/layouts/*": [ "./layouts/*" ],
+      "@/middleware/*": [ "./middleware/*" ],
+      "@/mixins/*": [ "./mixins/*" ],
+      "@/pages/*": [ "./pages/*" ],
+      "@/plugins/*": [ "./plugins/*" ],
+      "@/store/*": [ "./store/*" ],
+      "@/utils/*": [ "./utils/*" ]
+    },
+    "experimentalDecorators": true
+  },
+  "include": [
+    "components",
+    "layouts",
+    "middleware",
+    "mixins",
+    "pages",
+    "plugins",
+    "store",
+    "utils"
+  ]
+}

@@ -3650,9 +3650,9 @@
       "dev": true
     },
     "pako": {
-      "version": "1.0.9",
-      "resolved": "https://registry.npmjs.org/pako/-/pako-1.0.9.tgz",
-      "integrity": "sha512-tPjtE6dq+dOSg8NMkqRmFjUYH9fect1zmYgB0g6ztQMaVNI7N1CEvLZud2bPHhg7PRgfKEeTshSPiqXb1F7A+A==",
+      "version": "1.0.10",
+      "resolved": "https://registry.npmjs.org/pako/-/pako-1.0.10.tgz",
+      "integrity": "sha512-0DTvPVU3ed8+HNXOu5Bs+o//Mbdj9VNQMUOe9oKCwh8l0GNwpTDMKCWbRjgtD291AWnkAgkqA/LOnQS8AmS1tw==",
       "dev": true
     },
     "parallel-transform": {
@@ -4855,9 +4855,9 @@
       "dev": true
     },
     "tslint": {
-      "version": "5.13.0",
-      "resolved": "https://registry.npmjs.org/tslint/-/tslint-5.13.0.tgz",
-      "integrity": "sha512-ECOOQRxXCYnUUePG5h/+Z1Zouobk3KFpIHA9aKBB/nnMxs97S1JJPDGt5J4cGm1y9U9VmVlfboOxA8n1kSNzGw==",
+      "version": "5.13.1",
+      "resolved": "https://registry.npmjs.org/tslint/-/tslint-5.13.1.tgz",
+      "integrity": "sha512-fplQqb2miLbcPhyHoMV4FU9PtNRbgmm/zI5d3SZwwmJQM6V0eodju+hplpyfhLWpmwrDNfNYU57uYRb8s0zZoQ==",
       "dev": true,
       "requires": {
         "babel-code-frame": "^6.22.0",
