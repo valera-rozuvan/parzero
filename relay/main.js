@@ -27,22 +27,31 @@ wss.on('connection', function connection(ws) {
       const movesObj = JSON.parse(movesObjStr);
 
       const moves = movesObj.map((move) => {
-        if (move[2].length === 0) {
-          sideToMove = 'black';
-        }
+        // if (move[2].length === 0) {
+        //   sideToMove = 'black';
+        // }
 
         return `${move[0]}.${move[1]} ${move[2]}`
       });
       const moveHistory = moves.join(' ');
 
-      const fenStr = getFenPosition(moveHistory);
+      const position = getFenPosition(moveHistory);
+
+      const fenStr = position.fenStr;
+      const sideToMove = position.sideToMove;
 
       console.log(moveHistory);
       console.log('\n');
       console.log(fenStr);
       console.log('\n');
+      if (sideToMove === 'w') {
+        console.log('WHITE to move');
+      } else if (sideToMove === 'b') {
+        console.log('BLACK to move');
+      }
+      console.log('\n');
 
-      const nMovesToPonder = 15;
+      // const nMovesToPonder = 15;
 
       // const engine = new Engine(enginePath)
       // await engine.init()
@@ -66,17 +75,17 @@ wss.on('connection', function connection(ws) {
       const emitter = engine.goInfinite();
 
       emitter.on('data', (result) => {
-        console.log('---------------------------------------');
-        console.log('result');
-        console.log(result);
-        console.log('\n\n\n');
+        // console.log('---------------------------------------');
+        // console.log('result');
+        // console.log(result);
+        // console.log('\n\n\n');
       });
 
       setTimeout(async () => {
         const result = await engine.stop();
         outputResult(result);
         await engine.quit();
-      }, 300);
+      }, 500);
 
         // .go({ depth: nMovesToPonder })
         // .then((result) => {
@@ -140,7 +149,7 @@ wss.on('connection', function connection(ws) {
 });
 
 function outputResult(result) {
-  let sideToMove = 'white';
+  // let sideToMove = 'white';
 
   console.log(`---> best move: ${result.bestmove}`);
 
@@ -154,7 +163,7 @@ function outputResult(result) {
   });
 
   console.log(`---> depth: ${actualDepth}`);
-  console.log(`---> side to move: ${sideToMove}`);
+  // console.log(`---> side to move: ${sideToMove}`);
   console.log('\n');
 
   result.info.forEach((infoItem) => {
@@ -194,5 +203,10 @@ function getFenPosition(moveHistory) {
 
   chessInstance.load_pgn(moveHistory);
 
-  return chessInstance.fen();
+  const sideToMove = chessInstance.turn();
+
+  return {
+    fenStr: chessInstance.fen(),
+    sideToMove
+  };
 }
